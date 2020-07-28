@@ -1,0 +1,16 @@
+#title {
+   text-align: center;
+   color: rgb(96, 160, 0); 
+}
+
+#subtitle {
+   text-align: center;
+   color: green;
+}
+
+.images {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%; 
+}
