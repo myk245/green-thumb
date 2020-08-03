@@ -1,11 +1,14 @@
 #title {
+   font-family: 'Work Sans', sans-serif;
    text-align: center;
-   color: rgb(96, 160, 0); 
+   color: rgb(0, 160, 5); 
 }
 
 #subtitle {
+   font-family: 'Work Sans', sans-serif;
    text-align: center;
-   color: green;
+   font-size: medium;
+   color: rgb(0, 55, 0);
 }
 
 .images {
