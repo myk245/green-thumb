@@ -1,0 +1,23 @@
+{
+  "name": "Green-Thumb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myk245/green-thumb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myk245/green-thumb/issues"
+  },
+  "homepage": "https://github.com/myk245/green-thumb#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
