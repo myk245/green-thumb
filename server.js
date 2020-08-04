@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
    res.render('home')
 })
 
-app.get('/users', (req, res) => {
-   res.send('Users Page')
+app.get('/log', (req, res) => {
+   res.render('log')
 })
 
 // function logger(req, res, next) {

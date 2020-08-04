@@ -1,10 +1,10 @@
-#title {
+.title {
    font-family: 'Work Sans', sans-serif;
    text-align: center;
    color: rgb(0, 160, 5); 
 }
 
-#subtitle {
+.subtitle {
    font-family: 'Work Sans', sans-serif;
    text-align: center;
    font-size: 22px;
