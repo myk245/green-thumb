@@ -5,5 +5,6 @@ Green Thumb is an application for plant lovers. It provides a fun and easy way t
 Create a plant card for each of your plant bbs, upload a photo, specify the plant type, and make any notes for watering, feeding, and sunlight requirements. Green Thumb also provides general plant care tips and resources.
 
 ## Tech Stack
+- JavaScript
 - EJS
 - Express Server
