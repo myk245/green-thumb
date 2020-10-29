@@ -18,7 +18,7 @@ app.use(cors());
 // sets the view engine to EJS
 app.set('view engine', 'ejs');
 
-// directs Express to the public folder for stylesheets
+// serve static files
 app.use(express.static("public"));
 
 // controller actions

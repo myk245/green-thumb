@@ -6,5 +6,5 @@ Create a plant card for each of your plant bbs, upload a photo, specify the plan
 
 ## Tech Stack
 - JavaScript
+- Express
 - EJS
-- Express Server
