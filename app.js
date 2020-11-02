@@ -1,10 +1,9 @@
 const express = require('express');
-const cors = require('cors'); 
 
 const app = express();
 const port = process.env.SERVER_PORT || 3000;
 
-app.use(cors());
+const cors_proxy = require('cors-anywhere');
 
 // sets the view engine to EJS
 app.set('view engine', 'ejs');
