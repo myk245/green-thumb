@@ -23,8 +23,20 @@
 }
 
 /* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
+.plant-container {
+   height: 500px; 
+   width: 500px; 
+   padding: 30px 30px;
+   object-fit: contain;
+   text-align: center;
+}
+
+.plant-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+  height: auto; 
 }
 
 .images {
