@@ -1,9 +1,18 @@
 const express = require('express');
+const cors = require('cors'); 
 
 const app = express();
 const port = process.env.SERVER_PORT || 3000;
 
-const cors_proxy = require('cors-anywhere');
+app.use(cors());
+
+app.options('*', cors()); 
+
+app.use((request, response, next) => {
+   response.header("Access-Control-Allow-Origin", "*"); 
+   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   next(); 
+})
 
 // sets the view engine to EJS
 app.set('view engine', 'ejs');
