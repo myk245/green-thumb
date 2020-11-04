@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
    res.render('home')
 })
 
+app.get('/plants', (req, res) => {
+   res.render('plants')
+})
+
 app.get('/log', (req, res) => {
    res.render('log')
 })
