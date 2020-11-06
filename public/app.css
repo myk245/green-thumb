@@ -37,6 +37,7 @@
   margin-right: auto;
   width: 100%; 
   height: auto; 
+  position: relative;
 }
 
 .images {

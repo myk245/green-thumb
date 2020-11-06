@@ -4,12 +4,20 @@ const cardContainer = document.querySelector('.card-container');
 
 document.addEventListener('DOMContentLoaded', getPlantInfo)
 
-function getPlantInfo() {
-   fetch(`https://trefle.io/api/v1/plants?token=${apiKey}`)
-      .then(resp => resp.json())
-      // .then(data => console.log(data.data))
-      .then(data => (data.data.forEach(renderPlantCard)))
+async function getPlantInfo() {
+   const response = await fetch(`https://trefle.io/api/v1/plants?token=${apiKey}`);
+
+   const plantData = await response.json();
+
+   await plantData.data.forEach(renderPlantCard)
 }
+
+// function getPlantInfo() {
+//    fetch(`https://trefle.io/api/v1/plants?token=${apiKey}`)
+//       .then(resp => resp.json())
+//       // .then(data => console.log(data.data))
+//       .then(data => (data.data.forEach(renderPlantCard)))
+// }
 
 function renderPlantCard(plant) {
    let plantCard = document.createElement('div');
