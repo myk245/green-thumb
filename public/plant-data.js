@@ -22,12 +22,10 @@ async function getPlantInfo() {
 function renderPlantCard(plant) {
    let plantCard = document.createElement('div');
 
-   plantCard.className = 'card'
+   plantCard.className = 'plant-card'
    plantCard.innerHTML = `
-   <div class="plant-container">
    <h3>${plant.common_name}</h3>
    <img src='${plant.image_url}' class="plant-photo"/>
-   </div>
    `
    cardContainer.appendChild(plantCard); 
 }
