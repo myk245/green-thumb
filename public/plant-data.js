@@ -25,7 +25,9 @@ function renderPlantCard(plant) {
    plantCard.className = 'plant-card'
    plantCard.innerHTML = `
    <h3>${plant.common_name}</h3>
-   <img src='${plant.image_url}' class="plant-photo"/>
+   <div class="plant-photo-container">
+      <img src='${plant.image_url}' class="plant-photo"/>
+   </div>
    `
    cardContainer.appendChild(plantCard); 
 }
