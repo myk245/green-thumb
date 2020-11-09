@@ -28,6 +28,8 @@ function renderPlantCard(plant) {
    <div class="plant-photo-container">
       <img src='${plant.image_url}' class="plant-photo"/>
    </div>
+   <br></br>
+   <h4>${plant.scientific_name}</h4>
    `
    cardContainer.appendChild(plantCard); 
 }
