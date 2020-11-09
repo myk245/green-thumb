@@ -2,6 +2,38 @@
    box-sizing: border-box;
 }
 
+.navbar {
+   float: left; 
+   display: flex; 
+   justify-content: space-around;
+   text-align: center;
+   overflow: hidden;
+   margin: 0;
+   padding: 0;
+   margin-bottom: 10px; 
+   background-color: rgb(236, 247, 238);
+   width: 100vw; 
+}
+
+.navbar a {
+   padding: 14px 16px;
+   display: block; 
+   text-decoration: none;
+   color: rgb(94, 94, 94); 
+   font-family: 'Work Sans', sans-serif;
+   font-size: 1.2rem;
+}
+
+.navbar a:hover {
+   text-decoration: none;
+   background-color: lightgray;
+   color: black;
+}
+
+.active {
+   background-color: white; 
+}
+
 .title {
    font-family: 'Work Sans', sans-serif;
    text-align: center;
