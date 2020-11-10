@@ -29,6 +29,10 @@ app.get('/plants', (req, res) => {
    res.render('plants')
 })
 
+app.get('/plants/:id', (req, res) => {
+   res.render('plant-page')
+})
+
 app.get('/log', (req, res) => {
    res.render('log')
 })
