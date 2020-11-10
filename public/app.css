@@ -88,3 +88,15 @@
    margin-right: auto;
    width: 75%; 
 }
+
+.button {
+   background-color: rgb(236, 247, 238);
+   border: 1px lightgray solid; 
+   margin-top: 10px;
+   border-radius: 8px; 
+}
+
+.button:hover {
+   background-color: lightgray;
+   color: black;
+}

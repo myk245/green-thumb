@@ -30,6 +30,7 @@ function renderPlantCard(plant) {
    </div>
    <br></br>
    <h4>${plant.scientific_name}</h4>
+   <button type="button" class="button">More Info</button>
    `
    cardContainer.appendChild(plantCard); 
 }
