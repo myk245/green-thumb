@@ -2,12 +2,8 @@ const apiKey = config.apiKey;
 
 const cardContainer = document.querySelector('.card-container'); 
 
+// fetch from Trefle API and render plant cards when DOM loads
 document.addEventListener('DOMContentLoaded', getPlantInfo)
-
-// click event listener for more info button
-document.onload = function () {
-   document.querySelector('.button').addEventListener('click', getMoreInfo);
-}
 
 async function getPlantInfo() {
    const response = await fetch(`https://trefle.io/api/v1/plants?token=${apiKey}`);
@@ -30,18 +26,19 @@ function renderPlantCard(plant) {
    </div>
    <br></br>
    <h4>${plant.scientific_name}</h4>
-   <button type="button" class="button">More Info</button>
+   <button type="button" class="button" onclick="getMoreInfo(event)">More Info</button>
    `
    cardContainer.appendChild(plantCard); 
 }
 
-function getMoreinfo(event) {
-   // const plantId = event.target.parentNode
-   console.log("hello")
-   // const response = await fetch(`https://trefle.io/api/v1/plants?token=${apiKey}`);
+async function getMoreInfo(event) {
+   const plantId = event.target.parentNode.dataset.plantId
+   // console.log(event.target.parentNode.dataset.plantId)
+   
+   const response = await fetch(`https://trefle.io/api/v1/species/${plantId}?token=${apiKey}`);
 
-   // const plantData = await response.json();
+   const plantData = await response.json();
 
-   // await plantData.data.forEach(renderPlantCard)
+   console.log(plantData)
 }
 
