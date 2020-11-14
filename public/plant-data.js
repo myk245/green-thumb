@@ -39,6 +39,6 @@ async function getMoreInfo(event) {
 
    const plantData = await response.json();
 
-   console.log(plantData)
+   console.log(plantData.data)
 }
 
