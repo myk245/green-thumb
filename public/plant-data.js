@@ -42,3 +42,6 @@ async function getMoreInfo(event) {
    console.log(plantData.data)
 }
 
+function renderMoreDetails(plant) {
+   
+}
