@@ -42,6 +42,7 @@ async function getMoreInfo(event) {
    console.log(plantData.data)
 }
 
+// when more info button is pressed, bring user to plant show page
 function renderMoreDetails(plant) {
-   
+
 }
