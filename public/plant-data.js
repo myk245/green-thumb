@@ -26,13 +26,16 @@ function renderPlantCard(plant) {
    </div>
    <br></br>
    <h4>${plant.scientific_name}</h4>
-   <button type="button" class="button" onclick="getMoreInfo(event)">More Info</button>
+   <a href="/plants/${plant.slug}">
+      <button type="button" class="button" onclick="getMoreInfo(event)">More Info</button>
+   </a>
    `
    cardContainer.appendChild(plantCard); 
 }
 
 async function getMoreInfo(event) {
-   const plantId = event.target.parentNode.dataset.plantId
+   console.log(event.target.parentNode.parentNode.dataset.plantId)
+   const plantId = event.target.parentNode.parentNode.dataset.plantId
    // console.log(event.target.parentNode.dataset.plantId)
    
    const response = await fetch(`https://trefle.io/api/v1/species/${plantId}?token=${apiKey}`);
