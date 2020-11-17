@@ -26,42 +26,38 @@ function renderPlantCard(plant) {
    </div>
    <br></br>
    <h4>${plant.scientific_name}</h4>
-   <a href="/plants/${plant.slug}">
-      <button type="button" class="button" onclick="getMoreInfo(event)">More Info</button>
-   </a>
+   <button type="button" class="button" onclick="getMoreInfo(event)">More Info</button>
    `
    cardContainer.appendChild(plantCard); 
 }
 
 async function getMoreInfo(event) {
-   console.log(event.target.parentNode.parentNode.dataset.plantId)
-   const plantId = event.target.parentNode.parentNode.dataset.plantId
    // console.log(event.target.parentNode.dataset.plantId)
+   const plantId = event.target.parentNode.dataset.plantId
    
    const response = await fetch(`https://trefle.io/api/v1/species/${plantId}?token=${apiKey}`);
 
    const plantData = await response.json();
 
-   console.log(plantData.data)
-
-   // await plantData.renderMoreDetails();
+   await renderMoreDetails(plantData);
 }
 
 // when more info button is pressed, bring user to plant show page
 // will create a separate view file for this and then have the button's onClick event listener redirect to that view
 function renderMoreDetails(plant) {
-   let plantPage = document.createElement('div'); 
+   console.log(plant.data)
+   // let plantPage = document.createElement('div'); 
 
-   plantPage.className = 'plant-page'; 
+   // plantPage.className = 'plant-page'; 
 
-   plantPage.innerHTML = `
-      <h3>${plant.data.common_name}</h3>
-      <div class="plant-photo-container">
-      <img src='${plant.data.image_url}' class="plant-photo"/>
-      </div>
-      <br></br>
-      <h4>${plant.data.scientific_name}</h4>
-      <p>Edible?: ${plant.data.edible}</p>
-   `
-   cardContainer.appendChild(plantPage); 
+   // plantPage.innerHTML = `
+   //    <h3>${plant.data.common_name}</h3>
+   //    <div class="plant-photo-container">
+   //    <img src='${plant.data.image_url}' class="plant-photo"/>
+   //    </div>
+   //    <br></br>
+   //    <h4>${plant.data.scientific_name}</h4>
+   //    <p>Edible?: ${plant.data.edible}</p>
+   // `
+   // cardContainer.appendChild(plantPage); 
 }

@@ -29,7 +29,9 @@ app.get('/plants', (req, res) => {
    res.render('plants')
 })
 
-app.get('/plants/:id', (req, res) => {
+app.get('/plants/:plantName', (req, res) => {
+   console.log(req.params)
+   res.send(req.params)
    res.render('plant-page')
 })
 
