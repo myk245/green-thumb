@@ -40,9 +40,23 @@ async function getMoreInfo(event) {
    const plantData = await response.json();
 
    console.log(plantData.data)
+
+   await plantData.data.renderMoreDetails;
 }
 
 // when more info button is pressed, bring user to plant show page
 function renderMoreDetails(plant) {
+   let plantPage = document.createElement('div'); 
 
+   plantPage.className = 'plant-page'; 
+
+   plantPage.innerHTML = `
+      <h3>${plant.common_name}</h3>
+      <div class="plant-photo-container">
+      <img src='${plant.image_url}' class="plant-photo"/>
+      </div>
+      <br></br>
+      <h4>${plant.scientific_name}</h4>
+      <p>Edible?: ${plant.edible}</p>
+   `
 }
