@@ -41,22 +41,24 @@ async function getMoreInfo(event) {
 
    console.log(plantData.data)
 
-   await plantData.data.renderMoreDetails;
+   // await plantData.renderMoreDetails();
 }
 
 // when more info button is pressed, bring user to plant show page
+// will create a separate view file for this and then have the button's onClick event listener redirect to that view
 function renderMoreDetails(plant) {
    let plantPage = document.createElement('div'); 
 
    plantPage.className = 'plant-page'; 
 
    plantPage.innerHTML = `
-      <h3>${plant.common_name}</h3>
+      <h3>${plant.data.common_name}</h3>
       <div class="plant-photo-container">
-      <img src='${plant.image_url}' class="plant-photo"/>
+      <img src='${plant.data.image_url}' class="plant-photo"/>
       </div>
       <br></br>
-      <h4>${plant.scientific_name}</h4>
-      <p>Edible?: ${plant.edible}</p>
+      <h4>${plant.data.scientific_name}</h4>
+      <p>Edible?: ${plant.data.edible}</p>
    `
+   cardContainer.appendChild(plantPage); 
 }
