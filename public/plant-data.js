@@ -46,6 +46,9 @@ async function getMoreInfo(event) {
 // will create a separate view file for this and then have the button's onClick event listener redirect to that view
 function renderMoreDetails(plant) {
    console.log(plant.data)
+
+   window.location.href = `/plants/${plant.data.slug}`
+
    // let plantPage = document.createElement('div'); 
 
    // plantPage.className = 'plant-page'; 

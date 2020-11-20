@@ -30,7 +30,7 @@ app.get('/plants', (req, res) => {
 })
 
 app.get('/plants/:plantName', (req, res) => {
-   console.log(req.params)
+   // console.log(req.params)
    res.send(req.params)
    res.render('plant-page')
 })
