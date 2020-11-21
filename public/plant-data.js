@@ -47,20 +47,20 @@ async function getMoreInfo(event) {
 function renderMoreDetails(plant) {
    console.log(plant.data)
 
-   window.location.href = `/plants/${plant.data.slug}`
+   window.location.pathname = `/plants/${plant.data.slug}`
 
-   let plantPage = document.createElement('div'); 
+   // let plantPage = document.createElement('div'); 
 
-   plantPage.className = 'plant-page'; 
+   // plantPage.className = 'plant-page'; 
 
-   plantPage.innerHTML = `
-      <h3>${plant.data.common_name}</h3>
-      <div class="plant-photo-container">
-         <img src='${plant.data.image_url}' class="plant-photo"/>
-      </div>
-      <br></br>
-      <h4>${plant.data.scientific_name}</h4>
-      <p>Edible?: ${plant.data.edible}</p>
-   `
-   cardContainer.appendChild(plantPage); 
+   // plantPage.innerHTML = `
+   //    <h3>${plant.data.common_name}</h3>
+   //    <div class="plant-photo-container">
+   //       <img src='${plant.data.image_url}' class="plant-photo"/>
+   //    </div>
+   //    <br></br>
+   //    <h4>${plant.data.scientific_name}</h4>
+   //    <p>Edible?: ${plant.data.edible}</p>
+   // `
+   // cardContainer.appendChild(plantPage); 
 }
