@@ -47,7 +47,7 @@ async function getMoreInfo(event) {
 function renderMoreDetails(plant) {
    console.log(plant.data)
 
-   window.location.pathname = `/plants/${plant.data.slug}`
+   // window.location.pathname = `/plants/${plant.data.slug}`
 
    // let plantPage = document.createElement('div'); 
 

@@ -17,8 +17,10 @@ app.options('*', cors());
 // sets the view engine to EJS
 app.set('view engine', 'ejs');
 
+app.set('views', path.join(__dirname, 'views'));
+
 // serve static files
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // controller actions
 app.get('/', (req, res) => {
