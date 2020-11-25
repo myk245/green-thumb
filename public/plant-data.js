@@ -42,8 +42,8 @@ async function getMoreInfo(event) {
    await renderMoreDetails(plantData);
 }
 
-// when more info button is pressed, bring user to plant show page
-// will create a separate view file for this and then have the button's onClick event listener redirect to that view
+// when more info button is pressed, modal will pop 
+// up with additional details for the specific plant
 function renderMoreDetails(plant) {
    console.log(plant.data)
 }
