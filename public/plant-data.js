@@ -46,21 +46,12 @@ async function getMoreInfo(event) {
 // will create a separate view file for this and then have the button's onClick event listener redirect to that view
 function renderMoreDetails(plant) {
    console.log(plant.data)
-
-   // window.location.pathname = `/plants/${plant.data.slug}`
-
-   // let plantPage = document.createElement('div'); 
-
-   // plantPage.className = 'plant-page'; 
-
-   // plantPage.innerHTML = `
-   //    <h3>${plant.data.common_name}</h3>
-   //    <div class="plant-photo-container">
-   //       <img src='${plant.data.image_url}' class="plant-photo"/>
-   //    </div>
-   //    <br></br>
-   //    <h4>${plant.data.scientific_name}</h4>
-   //    <p>Edible?: ${plant.data.edible}</p>
-   // `
-   // cardContainer.appendChild(plantPage); 
 }
+
+// Modal 
+{/* <div id="myModal" class="modal">
+   <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+   </div>
+</div> */}
